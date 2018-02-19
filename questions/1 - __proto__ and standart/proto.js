@@ -3,6 +3,7 @@
 /*
  * For long time __proto__ was undocumented non-standart `illegal` property
  * What for now?
+ //// For now it is standart for all objects with Object.prototype in chain
  */
 
 const a = {}
@@ -18,8 +19,10 @@ console.log('b.__proto__ === a', b.__proto__ === a) // true, node 8.3.0 and Chro
 // https://www.ecma-international.org/ecma-262/6.0/#sec-additional-properties-of-the-object.prototype-object
 // So, `__proto__` property is standart for any object with Object.prototype in its prototype chain
 
+// What about exotic objects?
+
 let c
-(function q() {
+;(function q() {
   c = arguments
 })()
 
@@ -32,7 +35,7 @@ console.log('c.__proto__ === Object', c.__proto__ === Object) // false
 // Lets try to extend it, or change
 
 let d
-(function () {
+;(function () {
   d = arguments
 })()
 
