@@ -1,6 +1,6 @@
 The problem: when you mousedown on focusable element, and try to focus other element by js, it will not work:
 
-https://jsfiddle.net/pdknwse6/11/
+https://jsfiddle.net/pdknwse6/13/
 
 ```html
 <div tabindex='0' id='one'>Click</div>
@@ -45,4 +45,6 @@ Obviously after events queue, and after corresponded microqueue.
 
 You definitely could not call setTimeout callbacks before that mystery default handler queue.
 
-@todo
+Looks like default handler has its own queue, which scheduled next to events queue.
+
+Click on <a> behave the same way https://jsfiddle.net/ycupf46d/3/
