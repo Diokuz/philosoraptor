@@ -1,5 +1,7 @@
 The problem: I have two `onFocus` handlers on same input element. Looks like second handler executes after microtasks, added in first onFocus handler. Is that true?
 
+https://jsfiddle.net/wpt0hL04/1/
+
 ```html
 <input type='text'>
 ```
