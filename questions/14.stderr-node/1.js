@@ -1,0 +1,7 @@
+console.log('console.log')
+console.info('console.info')
+console.warn('console.warn')
+console.error('console.error')
+process.stdout.write('process.stdout.write')
+process.stderr.write('process.stderr.write')
+throw new Error('Error')

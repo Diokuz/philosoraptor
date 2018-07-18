@@ -1,0 +1,3 @@
+console.log
+console.info
+process.stdout.write
